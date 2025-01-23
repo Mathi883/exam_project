@@ -1,7 +1,7 @@
 import streamlit as st
 from registration_page import connect_to_mongo
 from text_to_music_app import text_to_music_AI
-#import pronouncing
+import pronouncing
 import random
 
 
@@ -69,13 +69,13 @@ def lyrics_writing():
     word = st.text_input("Enter a word to find rhymes:")
 
 #TODO:See if pronouncing works
-    #if word:
-        #rhymes = pronouncing.rhymes(word)
-        #if rhymes:
-            #st.write("Rhymes for:", word)
-            #st.markdown(rhymes)
-        #else:
-            #st.write("No rhymes found for this word.")
+    if word:
+        rhymes = pronouncing.rhymes(word)
+        if rhymes:
+            st.write("Rhymes for:", word)
+            st.markdown(rhymes)
+        else:
+            st.write("No rhymes found for this word.")
 
 def intro_page():
     st.title("ZongWr!ter")
