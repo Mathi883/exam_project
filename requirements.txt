@@ -8,3 +8,4 @@ pymongo
 pronouncing
 transformers
 scipy
+pkg_resources
