@@ -8,5 +8,3 @@ pymongo
 pronouncing
 transformers
 scipy
-datetime
-time
