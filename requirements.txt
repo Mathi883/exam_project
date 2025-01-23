@@ -6,7 +6,6 @@ qrcode-artistic
 hugchat
 pymongo
 pronouncing
-os
 transformers
 scipy
 datetime
