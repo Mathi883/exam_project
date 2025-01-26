@@ -23,7 +23,7 @@ def skip_register():
 if st.session_state.count == 0:
 
     register()
-    skip_register_button = st.button('Skip register', on_click=skip_register)
+    skip_register_button = st.button('Dive in!', on_click=skip_register)
 
 
 elif st.session_state.count == 2:
