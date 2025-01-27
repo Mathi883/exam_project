@@ -9,4 +9,4 @@ pronouncing
 transformers
 scipy
 setuptools
-PyTorch
+torch
