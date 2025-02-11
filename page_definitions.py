@@ -7,7 +7,7 @@ import random
 
 placeholder = st.empty()
 
-
+# This function creates a long hypen for the website's design
 def long_hyphen():
     st.write("--------------------------------------------------------------------------------------")
 def lyrics_writing():
@@ -63,12 +63,12 @@ def lyrics_writing():
 
     long_hyphen()
 
-    # Using "Pronouncing" to find rhymes
+    # Using "Pronouncing" to find rhymes, Code from CHATGPT
     st.subheader("Rhyme Finder for Lyrics Production")
 
     word = st.text_input("Enter a word to find rhymes:")
 
-#TODO:See if pronouncing works
+
     if word:
         rhymes = pronouncing.rhymes(word)
         if rhymes:
@@ -85,6 +85,7 @@ def intro_page():
              " and it helps getting inspiration when writing lyrics. HAVE FUN!")
     long_hyphen()
 
+    #Expander function from class
     with st.expander("More about the developer"):
         st.write("This app was developed by Mathis Schräder, a Digital Media student from Leuphana University"
                  " in Lüneburg. Since his childhood he is interested in music and producing his own songs."
@@ -108,6 +109,7 @@ def music_theory_page():
 
     c1, c2 = st.columns(2, vertical_alignment="top")
 
+    #Creating buttons on which you can click to see the videos
     with c1:
         harmonies = st.button("Video: Harmonies")
         container = st.container(border=True, height=300)
@@ -162,6 +164,7 @@ def music_theory_page():
 
     tabs1, tabs2, tabs3, tabs4 = st.tabs(['Harmonies', 'Melodies', 'Rhythms', 'Circle of Fifths'])
 
+    #Creating quiz pages with tabs and columns
     with tabs1:
         st.subheader("Harmonies Quiz")
         st.image("https://www.piano-lessons-info.com/images/xCScale-notes.jpg.pagespeed.ic.OXGK8v1VeU.jpg")
@@ -416,7 +419,7 @@ def music_theory_page():
 
         long_hyphen()
 
-
+# This Music AI Tool only works locally! Unfortunately it uses too much memory for the free version of the streamlit website.
 def music_ai():
     st.title("Music AI-Tool")
     long_hyphen()
@@ -424,7 +427,7 @@ def music_ai():
     text_to_music_AI()
 
 def feedback_page():
-
+    #Form for feedback, Connected to MongoDB
     with placeholder.form("feedback_form"):
         st.title("Feedback")
         long_hyphen()
@@ -433,6 +436,7 @@ def feedback_page():
         feedback = st.text_input("Feedback", max_chars=200)
         submit_button = st.form_submit_button("Submit")
 
+    #Connecting to the collection "feedback" in MongoDB and inserting the feedback into a new document
     if submit_button:
         try:
             client = connect_to_mongo()

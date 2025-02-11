@@ -41,8 +41,3 @@ elif st.session_state.count == 2:
         music_ai()
     elif page_selection == "📝 Feedback":
         feedback_page()
-
-
-#TODO: Maybe add Tabs in the pages (Music Theory page, Projects)
-#TODO: Submit Button muss zweimal gedrückt werden
-#TODO: Die App so gestalten, dass sie tatsächlich Spaß macht und nicht nur random Funktionen hat
